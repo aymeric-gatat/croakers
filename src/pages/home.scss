@@ -21,7 +21,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    background: url("products/default.webp") top / cover;
+    background: url("/products/default.webp") top / cover;
     padding: 0 calc((100% - 1440px) / 2);
     h1 {
       color: vars.$neutral-color-light;
