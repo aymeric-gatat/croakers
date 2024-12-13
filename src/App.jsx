@@ -5,7 +5,7 @@ import Footer from "./components/layouts/Footer/Footer";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/croakers">
       <Routes>
         <Route
           path="/"
