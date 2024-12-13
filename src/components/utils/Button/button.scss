@@ -1,0 +1,44 @@
+@use "../../../styles/variable.scss" as vars;
+
+.btn {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+  box-shadow: 0px 2px 2px 0px rgba(246, 75, 12, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &-full {
+    color: vars.$neutral-color-light;
+    border: none;
+    background: vars.$primary-color;
+    &:hover {
+      background: vars.$primary-color-dark;
+    }
+  }
+  &-outline {
+    color: vars.$primary-color;
+    border: 1px solid vars.$primary-color;
+    background-color: transparent;
+    &:hover {
+      color: vars.$primary-color-dark;
+      border-color: vars.$primary-color-dark;
+      background: vars.$primary-color-dark-transparent;
+    }
+  }
+  &-small {
+    padding: 0.25rem 1rem;
+    border-radius: 0.375rem;
+  }
+  &-medium {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+  }
+  &-large {
+    padding: 1rem 2rem;
+    border-radius: 0.625rem;
+  }
+  &:disabled {
+    background: rgba(193, 204, 255, 0.9);
+  }
+}

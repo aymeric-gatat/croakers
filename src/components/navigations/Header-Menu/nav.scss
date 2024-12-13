@@ -1,0 +1,36 @@
+@use "../../../styles/variable.scss" as vars;
+
+.primary-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 24px;
+  .item-nav {
+    position: relative;
+    font-size: 1rem;
+    line-height: 140%;
+    &:after {
+      position: absolute;
+      bottom: -5px;
+      left: -8px;
+      content: "";
+      width: 0;
+      height: calc(100% + 10px);
+      border-radius: 0.5rem;
+      background-color: vars.$primary-color-dark;
+      transition: all 0.3s ease-in-out;
+      z-index: -1;
+    }
+    &:hover {
+      &::after {
+        width: calc(100% + 16px);
+      }
+    }
+    &.active {
+      color: vars.$neutral-color-light;
+      &::after {
+        width: calc(100% + 16px);
+      }
+    }
+  }
+}

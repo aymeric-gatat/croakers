@@ -1,0 +1,125 @@
+@use "../styles/variable.scss" as vars;
+
+.homepage {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  section {
+    width: 100%;
+    padding: 64px;
+    h2 {
+      width: 100%;
+      text-align: center;
+      line-height: 140%;
+    }
+  }
+  .entete {
+    margin-top: -72px;
+    min-height: 100vh;
+    max-width: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background: url("products/default.webp") top / cover;
+    padding: 0 calc((100% - 1440px) / 2);
+    h1 {
+      color: vars.$neutral-color-light;
+      font-size: clamp(2rem, 64px, 4rem);
+      font-family: vars.$font-family-title;
+      font-weight: 800;
+      background-color: vars.$primary-color-dark;
+      width: fit-content;
+      padding: 4px 8px 2px 8px;
+      border-radius: 8px;
+    }
+    .subtitle {
+      color: vars.$primary-color-dark;
+      font-size: clamp(1.5rem, 32px, 2.5rem);
+      font-weight: 200;
+      background-color: vars.$neutral-color-light;
+      width: fit-content;
+      padding: 4px 8px 2px 8px;
+      border-radius: 8px;
+      span {
+        color: vars.$primary-color-dark;
+        font-family: vars.$font-family-title;
+        font-weight: 700;
+      }
+    }
+  }
+  .decouverte {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    .content {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      gap: 64px;
+      .content-box {
+        flex: 1;
+      }
+      .content-left {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 64px;
+        p {
+          line-height: 140%;
+        }
+        .btn-box {
+          display: flex;
+          gap: 12px;
+        }
+      }
+      .content-right {
+        background-color: #2a2a2a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        max-height: 800px;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &::before {
+      position: absolute;
+      bottom: calc(100% - 64px);
+      content: "";
+      width: 102vw;
+      height: 150px;
+      background-color: vars.$neutral-color-light;
+      border-radius: 100% 100% 0 0;
+    }
+  }
+  .produits {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    .text {
+      p {
+        width: 100%;
+        text-align: center;
+        line-height: 140%;
+      }
+    }
+  }
+  .avis {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+}

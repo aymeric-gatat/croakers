@@ -1,0 +1,19 @@
+@use "../../../styles/variable.scss" as vars;
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  li {
+    background-color: vars.$neutral-color-light;
+    box-shadow: 0 0 2px 0px #1a1a1a4a;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    p {
+      margin: 6px 0;
+      text-wrap: balance;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../../../styles/variable.scss" as vars;
+footer {
+  background-color: vars.$neutral-color-dark;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: f;
+  gap: 24px;
+  padding: 64px 64px 24px 64px;
+  border-top: 5px solid vars.$primary-color;
+  .column {
+    flex: 1;
+    height: 100%;
+    .footer-title {
+      color: vars.$primary-color;
+      font-size: 1.3rem;
+      font-weight: 700;
+      font-family: vars.$font-family-title;
+    }
+    p {
+      text-align: left;
+      padding: 0;
+    }
+    .logo {
+      font-size: 3.5rem;
+      padding: 8px 12px 4px 12px;
+    }
+  }
+  p {
+    width: 100%;
+    color: vars.$neutral-color-light;
+    line-height: 140%;
+    text-align: center;
+    padding: 24px 64px 0 64px;
+  }
+}
